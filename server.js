@@ -75,7 +75,7 @@ app.get('/app/rpsls/play/spock', (req, res) => {
 app.get('*', (req, res) => {
     try {
         body = req.body;
-        res.status(200).send(JSON.stringify(rpsls(body.shot))).end();
+        res.status(200).send(JSON.stringify(rps(body.shot))).end();
     } catch (error) {
         res.status(404).send('404 NOT FOUND').end();
     }
