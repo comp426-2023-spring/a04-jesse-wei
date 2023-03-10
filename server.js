@@ -29,16 +29,15 @@ app.post('/app/rps/play', (req, res) => {
     res.status(200).send(JSON.stringify(rps(req.body.shot))).end();
 })
 
-app.post('/app/rpsls/play*', (req, res) => {
-    const body = req.body
-    if (body.shot == 'lizard' || body.shot == 'spock') {
-        res.status(200).send(JSON.stringify(rpsls(body.shot))).end();
-    } else {
-        res.status(200).send(JSON.stringify(rps(body.shot))).end();
-    }
+app.post('/app/rps/play*', (req, res) => {
+    res.status(200).send(JSON.stringify(rps(req.body.shot))).end();
 })
 
 app.post('/app/rpsls/play', (req, res) => {
+    res.status(200).send(JSON.stringify(rpsls(req.body.shot))).end();
+})
+
+app.post('/app/rpsls/play*', (req, res) => {
     res.status(200).send(JSON.stringify(rpsls(req.body.shot))).end();
 })
 
