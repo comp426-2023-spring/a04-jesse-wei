@@ -10,7 +10,7 @@ const port = argv.port || 5000;
 const app = express();
 
 app.get('/app', (req, res) => {
-    res.status(200).send('OK').end();
+    res.status(200).send('200 OK').end();
 });
 
 app.get('/app/rps', (req, res) => {
@@ -62,7 +62,7 @@ app.get('/app/rpsls/play/spock', (req, res) => {
 })
 
 app.get('*', (req, res) => {
-    res.status(404).send('NOT FOUND').end();
+    res.status(404).send('404 NOT FOUND').end();
 })
 
 app.listen(port);
