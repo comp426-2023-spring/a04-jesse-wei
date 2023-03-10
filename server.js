@@ -28,17 +28,17 @@ app.post('/app/rps/play', (req, res) => {
     res.status(200).send(JSON.stringify(rps(req.body.shot))).end();
 })
 
-// app.post('/app/rps/play*', (req, res) => {
-//     res.status(200).send(JSON.stringify(rps(req.body.shot))).end();
-// })
+app.put('/app/rps/play*', (req, res) => {
+    res.status(200).send(JSON.stringify(rps(req.body.shot))).end();
+})
 
 app.post('/app/rpsls/play', (req, res) => {
     res.status(200).send(JSON.stringify(rpsls(req.body.shot))).end();
 })
 
-// app.post('/app/rpsls/play*', (req, res) => {
-//     res.status(200).send(JSON.stringify(rpsls(req.body.shot))).end();
-// })
+app.put('/app/rpsls/play*', (req, res) => {
+    res.status(200).send(JSON.stringify(rpsls(req.body.shot))).end();
+})
 
 app.get('/app/rps/play/rock', (req, res) => {
     res.status(200).send(JSON.stringify(rps('rock'))).end();
@@ -73,12 +73,7 @@ app.get('/app/rpsls/play/spock', (req, res) => {
 })
 
 app.get('*', (req, res) => {
-    try {
-        body = req.body;
-        res.status(200).send(JSON.stringify(rps(body.shot))).end();
-    } catch (error) {
-        res.status(404).send('404 NOT FOUND').end();
-    }
+    res.status(404).send('404 NOT FOUND').end();
 })
 
 app.listen(port);
