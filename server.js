@@ -24,12 +24,20 @@ app.get('/app/rpsls', (req, res) => {
     res.status(200).send(JSON.stringify(rpsls(req.body.shot))).end();
 })
 
-app.all('/app/rps/play', (req, res) => {
-    res.status(200).send(JSON.stringify(rps(req.body.shot || req.query.shot))).end();
+app.get('/app/rps/play', (req, res) => {
+    res.status(200).send(JSON.stringify(rps(req.query.shot))).end();
 })
 
-app.all('/app/rpsls/play', (req, res) => {
-    res.status(200).send(JSON.stringify(rpsls(req.body.shot || req.query.shot))).end();
+app.get('/app/rpsls/play', (req, res) => {
+    res.status(200).send(JSON.stringify(rps(req.query.shot))).end();
+})
+
+app.post('/app/rps/play', (req, res) => {
+    res.status(200).send(JSON.stringify(rps(req.body.shot))).end();
+})
+
+app.post('/app/rpsls/play', (req, res) => {
+    res.status(200).send(JSON.stringify(rpsls(req.body.shot))).end();
 })
 
 app.get('/app/rps/play/rock', (req, res) => {
