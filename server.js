@@ -9,15 +9,16 @@ const port = argv.port || 5000;
 
 const app = express();
 
-app.get('/app', (err, res) => {
-    res.status(200);
-    res.end();
+app.get('/app', (req, res) => {
+    res.status(200).send('OK').end();
 });
 
-app.get('/app/rps', (err, res) => {
-    res.status(JSON.stringify(rps()));
+app.get('/app/rps', (req, res) => {
+    res.status(200).send(JSON.stringify(rps())).end();
 })
 
-app.get('/app/rpsls', (err, res) => {
-    res.status(JSON.stringify(rpsls()))
+app.get('/app/rpsls', (req, res) => {
+    res.status(200).send(JSON.stringify(rpsls())).end();
 })
+
+app.listen(port);
