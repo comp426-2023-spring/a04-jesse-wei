@@ -61,4 +61,8 @@ app.get('/app/rpsls/play/spock', (req, res) => {
     res.status(200).send(JSON.stringify(rpsls('spock'))).end();
 })
 
+app.get('*', (req, res) => {
+    res.status(404).send('NOT FOUND').end();
+})
+
 app.listen(port);
