@@ -77,6 +77,7 @@ app.get('/app/rpsls/play/spock', (req, res) => {
 })
 
 app.get('*', (req, res) => {
+    console.log('5');
     res.status(404).send('404 NOT FOUND').end();
 })
 
