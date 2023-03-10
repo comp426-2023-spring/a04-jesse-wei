@@ -15,5 +15,9 @@ app.get('/app', (err, res) => {
 });
 
 app.get('/app/rps', (err, res) => {
-    return rps();
+    return JSON.stringify(rps());
+})
+
+app.get('/app/rpsls', (err, res) => {
+    return JSON.stringify(rpsls())
 })
