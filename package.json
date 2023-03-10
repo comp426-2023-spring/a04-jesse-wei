@@ -1,0 +1,23 @@
+{
+  "name": "a04-jesse-wei",
+  "version": "1.0.0",
+  "description": "Stand up a web API using express",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js --port=5555"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comp426-2023-spring/a04-jesse-wei.git"
+  },
+  "author": "Jesse Wei",
+  "license": "GPL-3.0-only",
+  "bugs": {
+    "url": "https://github.com/comp426-2023-spring/a04-jesse-wei/issues"
+  },
+  "homepage": "https://github.com/comp426-2023-spring/a04-jesse-wei#readme",
+  "dependencies": {
+    "minimist": "^1.2.8"
+  },
+  "type": "module"
+}
