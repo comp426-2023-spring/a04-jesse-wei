@@ -29,7 +29,7 @@ app.post('/app/rps/play', (req, res) => {
     res.status(200).send(JSON.stringify(rps(req.body.shot))).end();
 })
 
-app.post('/app/rps/play/*', (req, res) => {
+app.post('/app/rps/play*', (req, res) => {
     console.log('2');
     res.status(200).send(JSON.stringify(rps(req.body.shot))).end();
 })
@@ -39,7 +39,7 @@ app.post('/app/rpsls/play', (req, res) => {
     res.status(200).send(JSON.stringify(rpsls(req.body.shot))).end();
 })
 
-app.post('/app/rpsls/play/*', (req, res) => {
+app.post('/app/rpsls/play*', (req, res) => {
     console.log('4');
     res.status(200).send(JSON.stringify(rpsls(req.body.shot))).end();
 })
