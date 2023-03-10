@@ -52,11 +52,11 @@ app.post('/app/rpsls/play', (req, res) => {
 })
 
 app.get('/app/rps/play/:shot', (req, res) => {
-    res.status(200).send(JSON.stringify(rps(req.params['shot']))).end();
+    res.status(200).send(JSON.stringify(rps(req.params.shot))).end();
 })
 
 app.get('/app/rpsls/play/:shot', (req, res) => {
-    res.status(200).send(JSON.stringify(rpsls(req.params['shot']))).end();
+    res.status(200).send(JSON.stringify(rpsls(req.params.shot))).end();
 })
 
 app.get('*', (req, res) => {
